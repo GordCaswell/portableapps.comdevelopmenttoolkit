@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  ComCtrls, StdCtrls, Menus, Spin, types;
+  ComCtrls, StdCtrls, Menus, Spin;
 
 type
 
@@ -127,8 +127,14 @@ type
     TestTabSheet: TTabSheet;
     TestMenuItem: TMenuItem;
     StartMenuItem: TMenuItem;
-    procedure StartTabSheetContextPopup(Sender: TObject; MousePos: TPoint;
-      var Handled: Boolean);
+    procedure AboutMenuItemClick(Sender: TObject);
+    procedure CompactMenuItemClick(Sender: TObject);
+    procedure DetailsMenuItemClick(Sender: TObject);
+    procedure LauncherMenuItemClick(Sender: TObject);
+    procedure OptionsMenuItemClick(Sender: TObject);
+    procedure PublishMenuItemClick(Sender: TObject);
+    procedure StartMenuItemClick(Sender: TObject);
+    procedure TestMenuItemClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -144,19 +150,44 @@ implementation
 
 { TMainWindowForm }
 
-procedure TMainWindowForm.StartTabSheetContextPopup(Sender: TObject;
-  MousePos: TPoint; var Handled: Boolean);
+procedure TMainWindowForm.DetailsMenuItemClick(Sender: TObject);
 begin
-  object OpenGroupBox: TGroupBox
-  Left = 1
-  Height = 57
-  Top = 32
-  Width = 551
-  Caption = 'Open an existing Package'
-  ClientHeight = 37
-  ClientWidth = 547
-  TabOrder = 0
-end
+     MainPageControl.ActivePage := DetailsTabSheet;
+end;
+
+procedure TMainWindowForm.CompactMenuItemClick(Sender: TObject);
+begin
+     MainPageControl.Active := CompactTabSheet;
+end;
+
+procedure TMainWindowForm.AboutMenuItemClick(Sender: TObject);
+begin
+     MainPageControl.ActivePage := AboutTabSheet;
+end;
+
+procedure TMainWindowForm.LauncherMenuItemClick(Sender: TObject);
+begin
+     MainPageControl.ActivePage := LauncherTabSheet;
+end;
+
+procedure TMainWindowForm.OptionsMenuItemClick(Sender: TObject);
+begin
+     MainPageControl.ActivePage := OptionsTabSheet;
+end;
+
+procedure TMainWindowForm.PublishMenuItemClick(Sender: TObject);
+begin
+     MainPageControl.ActivePage := PublishTabSheet;
+end;
+
+procedure TMainWindowForm.StartMenuItemClick(Sender: TObject);
+begin
+     MainPageControl.ActivePage := StartTabSheet;
+end;
+
+procedure TMainWindowForm.TestMenuItemClick(Sender: TObject);
+begin
+     MainPageControl.ActivePage := TestTabSheet;
+end;
 
 end.
-

@@ -9,6 +9,7 @@
       <Title Value="PortableApps.comDevelopmentToolkit"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
@@ -34,9 +35,8 @@
     </RequiredPackages>
     <Units Count="2">
       <Unit0>
-        <Filename Value="PortableApps.lpr"/>
+        <Filename Value="PortableApps.comDevelopmentToolkit.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="PortableApps.comDevelopmentToolkit"/>
       </Unit0>
       <Unit1>
         <Filename Value="main.pas"/>
@@ -51,7 +51,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="PortableAppsDevelopmentToolkit"/>
+      <Filename Value="PortableApps.comDevelopmentToolkit"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>

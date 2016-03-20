@@ -6,9 +6,8 @@
     <BuildModes Active="Default"/>
     <Units Count="2">
       <Unit0>
-        <Filename Value="PortableApps.lpr"/>
+        <Filename Value="PortableApps.comDevelopmentToolkit.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="PortableApps.comDevelopmentToolkit"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
